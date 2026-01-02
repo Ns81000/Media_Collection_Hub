@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Collection Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Password Protection Screen -->
+    <div id="login-container" class="login-screen">
+        <div class="login-box">
+            <div class="lock-icon">🔒</div>
+            <h1>Secured Access</h1>
+            <p>Enter your password to continue</p>
+            <form id="login-form">
+                <input type="password" id="password-input" placeholder="Enter Password" autocomplete="off" required>
+                <button type="submit">Unlock</button>
+            </form>
+            <p id="error-message" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden until authenticated) -->
+    <div id="main-content" class="main-content hidden">
+        <main class="container">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">📚 Media Collection Hub</h1>
+                    <p class="subtitle">Your Personal Media & Entertainment Portal</p>
+                </div>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+            <!-- Local Storage Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <span class="icon">💾</span>
+                    Local Storage
+                </h2>
+                <div class="cards-grid">
+                    <a href="#" class="card" data-type="phone" data-path="Phone 99 Folder">
+                        <div class="card-icon">📱</div>
+                        <h3>Phone Storage</h3>
+                        <p>Local device storage</p>
+                        <span class="card-url">Phone 99 Folder</span>
+                    </a>
+                    <a href="#" class="card" data-type="pc" data-path="E:\Mr.M&S">
+                        <div class="card-icon">🖥️</div>
+                        <h3>PC Drive E:</h3>
+                        <p>Media collection folder</p>
+                        <span class="card-url">E:\Mr.M&S</span>
+                    </a>
+                    <a href="#" class="card" data-type="pc" data-path="C:\Users\Ns8pc\Videos\M&S">
+                        <div class="card-icon">💻</div>
+                        <h3>PC Videos</h3>
+                        <p>Video library folder</p>
+                        <span class="card-url">C:\Users\Ns8pc\Videos\M&S</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Web Services Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <span class="icon">🌐</span>
+                    Web Services
+                </h2>
+                <div class="cards-grid">
+                    <a href="https://ns81000.github.io/media_tracker/index.html" target="_blank" class="card">
+                        <div class="card-icon">📊</div>
+                        <h3>Media Tracker</h3>
+                        <p>Track your media progress</p>
+                        <span class="card-url">ns81000.github.io/media_tracker</span>
+                    </a>
+                    <a href="http://localhost:3000/" target="_blank" class="card">
+                        <div class="card-icon">🐳</div>
+                        <h3>Docker Service</h3>
+                        <p>Local Docker container</p>
+                        <span class="card-url">localhost:3000</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Movies & TV Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <span class="icon">🎬</span>
+                    Movies & TV
+                </h2>
+                <div class="cards-grid">
+                    <a href="https://www.imdb.com/user/ur166043092/lists/" target="_blank" class="card">
+                        <div class="card-icon">🎥</div>
+                        <h3>IMDb Lists</h3>
+                        <p>Your movie watchlists</p>
+                        <span class="card-url">imdb.com/user/ur166043092/lists</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Anime & Manga Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <span class="icon">🎌</span>
+                    Anime & Manga
+                </h2>
+                <div class="cards-grid">
+                    <a href="https://myanimelist.net/animelist/Ns8" target="_blank" class="card">
+                        <div class="card-icon">📺</div>
+                        <h3>MyAnimeList</h3>
+                        <p>Anime tracking</p>
+                        <span class="card-url">myanimelist.net/animelist/Ns8</span>
+                    </a>
+                    <a href="https://myanimelist.net/mangalist/Ns8" target="_blank" class="card">
+                        <div class="card-icon">📖</div>
+                        <h3>MyAnimeList</h3>
+                        <p>Manga tracking</p>
+                        <span class="card-url">myanimelist.net/mangalist/Ns8</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Books & Comics Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <span class="icon">📚</span>
+                    Books & Comics
+                </h2>
+                <div class="cards-grid">
+                    <a href="https://www.goodreads.com/review/list/166316155-vnkcp1" target="_blank" class="card">
+                        <div class="card-icon">📕</div>
+                        <h3>Goodreads</h3>
+                        <p>Book collection</p>
+                        <span class="card-url">goodreads.com/review/list/166316155</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1dvKCxXePjX4_wZjI_NcbtARyX8XugHOd/view" target="_blank" class="card">
+                        <div class="card-icon">☁️</div>
+                        <h3>Google Drive</h3>
+                        <p>Cloud storage file</p>
+                        <span class="card-url">drive.google.com/file/d/1dvKCxXe...</span>
+                    </a>
+                    <a href="https://leagueofcomicgeeks.com/profile/see_how_it_goes/read-list" target="_blank" class="card">
+                        <div class="card-icon">📰</div>
+                        <h3>Comics Read List</h3>
+                        <p>League of Comic Geeks</p>
+                        <span class="card-url">leagueofcomicgeeks.com/.../read-list</span>
+                    </a>
+                    <a href="https://leagueofcomicgeeks.com/profile/see_how_it_goes/wish-list" target="_blank" class="card">
+                        <div class="card-icon">⭐</div>
+                        <h3>Comics Wish List</h3>
+                        <p>League of Comic Geeks</p>
+                        <span class="card-url">leagueofcomicgeeks.com/.../wish-list</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Gaming Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <span class="icon">🎮</span>
+                    Gaming
+                </h2>
+                <div class="cards-grid">
+                    <a href="https://bckl.gg/p2pM" target="_blank" class="card">
+                        <div class="card-icon">🎯</div>
+                        <h3>Backloggery #1</h3>
+                        <p>Game collection tracker</p>
+                        <span class="card-url">bckl.gg/p2pM</span>
+                    </a>
+                    <a href="https://bckl.gg/p2rg" target="_blank" class="card">
+                        <div class="card-icon">🕹️</div>
+                        <h3>Backloggery #2</h3>
+                        <p>Game backlog tracker</p>
+                        <span class="card-url">bckl.gg/p2rg</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2026 Media Collection Hub. Secured with encryption.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
